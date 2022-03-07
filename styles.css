@@ -1,0 +1,155 @@
+*,
+::before,
+::after {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+}
+:root {
+	/* Colors */
+
+	--pale-blue: hsl(225, 100%, 94%);
+	--bright-blue: hsl(245, 75%, 52%);
+
+	--very-pale-blue: hsl(225, 100%, 98%);
+	--desaturated-blue: hsl(224, 23%, 55%);
+	--dark-blue: hsl(223, 47%, 23%);
+}
+
+body {
+	font-size: 16px;
+	font-family: "Red Hat Display", sans-serif;
+	color: var(--desaturated-blue);
+}
+
+#title {
+	color: var(--dark-blue);
+	font-weight: 900;
+}
+
+/* Used the backgroung propery instead of adding the image to the html doctument */
+
+main {
+	height: 100vh;
+	background: var(--pale-blue) url("/images/pattern-background-desktop.svg")
+		no-repeat;
+	/* Background size 100% to take up full viewport width */
+	background-size: 100%;
+	width: 100vw;
+}
+
+#main-content {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#hero-img {
+	width: 100%;
+	border-radius: 20px 20px 0 0;
+}
+
+.card {
+	background-color: white;
+	width: 400px;
+	border-radius: 20px;
+	margin: 2em;
+	box-shadow: 0 30px 30px -15px #bbb9f3;
+}
+
+.card-content {
+	padding: 0 2.5em;
+	padding-bottom: 1.5em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.plan {
+	margin: 0;
+	display: flex;
+	width: 100%;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1.3em;
+	background-color: var(--very-pale-blue);
+	border-radius: 10px;
+	margin-bottom: 3em;
+}
+
+.plan a {
+	color: var(--bright-blue);
+	font-weight: 700;
+}
+
+.plan a:hover {
+	color: hsl(254, 56%, 65%);
+}
+
+.mrg-right {
+	margin-right: -70px;
+}
+
+span {
+	font-weight: 900;
+	color: var(--dark-blue);
+}
+.mrg-top {
+	margin-top: 1.5em;
+}
+
+#payment-btn {
+	padding: 0.75em 5em;
+	border-radius: 10px;
+	background-color: var(--bright-blue);
+	text-decoration: none;
+	color: white;
+	font-weight: 700;
+	box-shadow: 0 10px 20px 3px #bbb9f3;
+}
+
+#payment-btn:hover {
+	background-color: hsl(254, 56%, 65%);
+}
+
+#cancel-btn {
+	text-decoration: none;
+	font-weight: 700;
+	color: var(--desaturated-blue);
+}
+
+#cancel-btn:hover {
+	color: var(--dark-blue);
+}
+
+.btn {
+	padding: 1em 5.3em;
+}
+
+@media screen and (max-width: 450px) {
+	main {
+		height: 100vh;
+		background: var(--pale-blue) url("/images/pattern-background-mobile.svg")
+			no-repeat;
+		background-size: 100%;
+		width: 100vw;
+	}
+
+	.card-content {
+		padding: 0 1em;
+		padding-bottom: 1.5em;
+	}
+	.card {
+		margin: 1em auto;
+		width: 90%;
+	}
+	.plan {
+		padding: 1em;
+	}
+
+	#payment-btn {
+		padding: 0.75em 4.5em;
+	}
+}
